@@ -1,97 +1,97 @@
 main {
     display: flex;
     height: calc(100vh - 37px);
-    gap: 20px;
-    padding: 20px;
+    gap: 20px;  /* Added spacing between sections */
+    padding: 20px;  /* Added padding around main */
+    /* background-color: #f0f5ff;  Light blue background */
 }
-#list{
-    background-color: aquamarine;
-    
-    
-    flex: 3;
-}
-#form{
-    background-color: bisque;
-    flex: 2;
-}
-    
-/* General Reset and Body Styling */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Header Styling */
-h1 {
-    font-size: 2rem;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: #007bff;
-    background: linear-gradient(45deg, #007bff, #5a9bd4);
-    border-radius: 5px;
-    color: #fff;
-}
-
-/* Main Container */
-main {
-    width: 100%;
-    max-width: 600px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-/* Form Section */
-#form {
-    margin-top: 20px;
-}
-
-.form-label {
-    font-weight: bold;
-    color: #555;
-}
-
-.form-control, .form-select {
-    border-radius: 4px;
-}
-
-/* Section for List */
 #list {
-    padding: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    color: #007bff;
+    background-color: #ffffff;  /* White background */
+    flex: 3;
+    border-radius: 12px;  /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 98, 255, 0.1);  /* Soft blue shadow */
+    padding: 20px;
+    transition: all 0.3s ease;  /* Smooth hover effect */
 }
-
-/* Button Styling */
-button.btn-primary {
-    display: block;
-    width: 100%;
-    font-size: 1rem;
-    padding: 10px;
-    border-radius: 4px;
-    margin-top: 15px;
-    background-color: #007bff;
-    background: linear-gradient(45deg, #007bff, #5a9bd4);
+#list:hover {
+    box-shadow: 0 6px 20px rgba(0, 98, 255, 0.15);  /* Enhanced shadow on hover */
+    transform: translateY(-2px);  /* Slight lift effect */
+}
+#form {
+    background-color: #ffffff;  /* White background */
+    flex: 2;
+    border-radius: 12px;  /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 98, 255, 0.1);  /* Soft blue shadow */
+    padding: 25px;
+    border-left: 4px solid #0062ff;  /* Blue accent line */
+}
+/* Additional styles for form elements */
+.form-control, .form-select {
+    border: 2px solid #e6efff;  /* Light blue border */
+    transition: all 0.3s ease;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #0062ff;  /* Blue border on focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 98, 255, 0.15);  /* Soft blue glow */
+}
+.form-label {
+    color: #1a1f36;  /* Dark blue-gray text */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.input-group-text {
+    background-color: #0062ff;  /* Blue background for dollar sign */
+    color: white;
     border: none;
 }
-
-button.btn-primary:hover {
-    background: linear-gradient(45deg, #5a9bd4, #007bff);
-    color: #fff;
-    transition: background-color 0.3s ease-in-out;
+/* Optional: Add some hover effects for interactivity */
+.form-control:hover, .form-select:hover {
+    border-color: #0062ff;  /* Blue border on hover */
+}
+/* task list */
+.task-container {
+    margin: 15px 0;
+    border-left: 4px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+.task-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.task {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.task .info {
+    flex: 3;
+}
+.task .info h5 {
+    color: #1E90FF;
+    font-size: 18px;
+}
+.task .info p {
+    margin: 0;
+    color: #555555;
+    font-size: 16px;
+}
+.task .status {
+    background-color: #E6F2FF;
+    color: #1E90FF;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.date-budget {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 14px;
+    color: #777777;
 }

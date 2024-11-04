@@ -1,0 +1,97 @@
+main {
+    display: flex;
+    height: calc(100vh - 37px);
+    gap: 20px;
+    padding: 20px;
+}
+#list{
+    background-color: aquamarine;
+    
+    
+    flex: 3;
+}
+#form{
+    background-color: bisque;
+    flex: 2;
+}
+    
+/* General Reset and Body Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styling */
+h1 {
+    font-size: 2rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #007bff;
+    background: linear-gradient(45deg, #007bff, #5a9bd4);
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* Main Container */
+main {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Form Section */
+#form {
+    margin-top: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-control, .form-select {
+    border-radius: 4px;
+}
+
+/* Section for List */
+#list {
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #007bff;
+}
+
+/* Button Styling */
+button.btn-primary {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+    background-color: #007bff;
+    background: linear-gradient(45deg, #007bff, #5a9bd4);
+    border: none;
+}
+
+button.btn-primary:hover {
+    background: linear-gradient(45deg, #5a9bd4, #007bff);
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+}
