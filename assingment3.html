@@ -3,50 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>task manager</title>
+    <title>Task Manager</title>
     <link rel="stylesheet" href="./styles/app.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-<h1 class="bg-primary bg-gradient text-white text-center p-4">Task Manager</h1>
-<main class="bg-primary bg-opacity-10">
-    <section id="list">Task List</section>
-    <section id="form">
-    <div  class="mt-3">
-        <label class="form-label">Title</label>
-        <input id="txtTitle" type="text" class="form-control">
-    </div>  
-    <div class="mt-3">
-        <label class="form-label">Description</label>
-        <textarea id="txtDescription" rows="3" class="form-control"></textarea>
-    </div> 
-    <div class="mt-3">
-        <label class="form-label">Color</label>
-        <input id="selColor" class="form-control" type="color">
-    </div>
-    <div class="mt-3">
-        <label class="form-label">Date</label>
-        <input id="selDate" type="datetime-local" class="form-control">
-    </div>  
-    <div class="mt-3">
-        <label class="form-label">Status</label>
-        <select id="selStatus" class="form-control">
-        <option>New</option>
-        <option>Completed</option>
-        <option>Cancel</option>
-        </select>
-    </div>  
-    <div class="mt-3">
-        <label class="form-label">Budget</label>
-        <input id="numBudget" type="number" class="form-control">
-    </div> 
-    <div class="mt-3">
-        <button id="btnSave" class="btn btn-primary">Save Task</button>
-    </div>
-    </section>
-</main>
-<!-- the form section inclues the following elements (use boostrap form): 
-    title, description, startDate, status, budget -->
+    <h1 class="bg-primary bg-gradient text-white text-center p-4">Task Manager</h1>
+    <main class="container bg-primary bg-opacity-10 p-4">
+        <section id="list" class="mb-4">
+            <h2>Task List</h2>
+            <div id="taskList" class="list-group"></div>
+        </section>
+
+        <section id="form">
+            <h2>Create a New Task</h2>
+            <div class="mb-3">
+                <label for="txtTitle" class="form-label">Title</label>
+                <input id="txtTitle" type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="txtDescription" class="form-label">Description</label>
+                <textarea id="txtDescription" rows="3" class="form-control"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="selColor" class="form-label">Color</label>
+                <input id="selColor" type="color" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="selDate" class="form-label">Date</label>
+                <input id="selDate" type="datetime-local" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="selStatus" class="form-label">Status</label>
+                <select id="selStatus" class="form-select">
+                    <option value="New">New</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="numBudget" class="form-label">Budget</label>
+                <input id="numBudget" type="number" class="form-control">
+            </div>
+            <button id="btnSave" class="btn btn-primary">Save Task</button>
+        </section>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="./scripts/task.js"></script>
